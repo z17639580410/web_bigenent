@@ -3,6 +3,48 @@ html,body{
     padding: 0;
     height: 100%;
     width: 100%;
-    background:url('./images/login_bg.jpg') no-repeat center;
+    background:url('../images/login_bg.jpg');
     background-size: cover;
+}
+.loginAndRegBox{
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.title-image{
+    background: url('../images/login_title.png') no-repeat center;
+    height: 60px;
+}
+.layui-form{
+    padding: 0 30px;
+}
+.reg-box{
+    display: none;
+}
+.link a{
+    float: right;
+    font-size: 12px;
+}
+/*
+.link{
+    display: flex;
+    justify-content: flex-end;
+}
+使用flex布局让文字靠右
+*/
+.layui-form-item{
+    position: relative;
+}
+.layui-icon{
+    position: absolute;
+    top: 9px;
+    left: 10px;
+}
+.layui-form-item .layui-input{
+  padding-left: 30px;
 }
