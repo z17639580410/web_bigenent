@@ -33,14 +33,14 @@ function getUserInfo(){
         },
         //无论成功还是失败最终都会调用complete函数
         //在complete回调函数中可以使用res.responsejson拿到响应消息
-        //complete:function(res){
-         //   if(res.responseJSON.status ===1 && res.responseJSON.message === '身份认证失败！'){
-          //      //1.强制清空token
-           //     localStorage.removeItem('token')
-          //      //2.强制跳转到登录页
-           //     location.href='./login.html'
-          //  }
-       // }
+        /*complete:function(res){
+            if(res.responseJSON.status ===1 && res.responseJSON.message === '身份认证失败！'){
+                //1.强制清空token
+                localStorage.removeItem('token')
+               //2.强制跳转到登录页
+                location.href='./login.html'
+            }
+        }*/
     })
 }
 //渲染头像函数
