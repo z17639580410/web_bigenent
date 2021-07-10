@@ -1,0 +1,8 @@
+html,boday{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 35px;
+    background-color: #f2f3f5;
+}
