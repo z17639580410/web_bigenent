@@ -37,8 +37,11 @@ $(function(){
             method:'GET',
             url:'/my/userinfo',
             success:function(res){
+                console.log(res)
                 if(res.status !== 0){
+                    
                     return layer.msg('获取用户信息失败！')
+                   
                 }
                // console.log(res)
                 //调用form.val快速赋值

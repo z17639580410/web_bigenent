@@ -64,24 +64,26 @@ $(function () {
             .toBlob(function (blob) { // 将 Canvas 画布上的内容，转化为文件对象
                 // 得到文件对象后，进行后续的操作
                 //将文件对象存储到fd中
-                fd.append('cover_img',blob)
+                fd.append('cover_img', blob)
                 //然后发起ajax请求
                 publishArticle(fd)
             })
     })
-    function publishArticle(fd){
+
+    function publishArticle(fd) {
         $.ajax({
-            method:'POST',
-            url:'/my/article/add',
-            data:fd,//如果向服务器提交的是formdata格式的数据必须定义以下两个配置
-            contentType:false,
-            processData:false,
-            success:function(res){
-                if(res.status !== 0){
+            method: 'POST',
+            url: '/my/article/add',
+            data: fd, //如果向服务器提交的是formdata格式的数据必须定义以下两个配置
+            contentType: false,
+            processData: false,
+            success: function (res) {
+                console.log(res)
+                if (res.status !== 0) {
                     return layer.msg('文章发布失败！')
                 }
                 layer.msg('文章发布成功！')
-               location.href = './../article/art_list.html'
+                location.href = './../article/art_list.html'
             }
         })
     }

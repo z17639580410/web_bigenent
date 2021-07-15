@@ -112,6 +112,7 @@
                 success:function(res){
                     if(res.status !== 0){return layer.msg('登陆失败')}
                     layer.msg('登陆成功')
+            
                     //将登陆成功得到的token字符串保存到localStoreage
                     localStorage.setItem('token',res.token)
                     //跳转到主页页面

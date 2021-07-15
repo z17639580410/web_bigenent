@@ -20,6 +20,7 @@ $(function(){
             url:'/my/updatepwd',
             data:$(this).serialize(),
             success:function(res){
+                
                 if(res.status !== 0){
                     $('.layui-form')[0].reset()
                     return layui.layer.msg('更新密码失败！')
