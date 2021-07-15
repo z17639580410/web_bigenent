@@ -6,7 +6,7 @@ $.ajaxPrefilter(function(options){
    options.url = 'http://api-breakingnews-web.itheima.net'+options.url
 
 if(options.url.indexOf('/my/') !== -1){
-    //统一为有权限的接口设置请求头
+    //统一为有权限的接口设置请求头 
     //ondexof方法如果不包含options.url会返回-1
    options.headers={
     Authorization:localStorage.getItem('token')
